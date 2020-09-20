@@ -23,7 +23,7 @@ var userSchema = new mongoose.Schema(
         },
         userinfo: {
             type: String,
-            required: true,
+            trim: true,
         },
         encry_password: {
             type: String,
@@ -53,7 +53,7 @@ userSchema
         return this._password;
     });
 
-userSchema.method = {
+userSchema.methods = {
     authenticate: function (plainpassword) {
         return this.securePassword(plainpassword) === this.encry_password;
     },
