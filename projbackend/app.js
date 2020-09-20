@@ -20,7 +20,6 @@ mongoose
     .then(() => {
         console.log("!!! DB CONNECTED !!!");
     });
-// .catch(console.log("DB CONNECTION FAILED"));
 
 // Middlewares
 app.use(bodyParser.json());

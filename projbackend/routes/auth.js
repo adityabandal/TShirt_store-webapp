@@ -3,11 +3,7 @@ var router = express.Router();
 
 const { signout, signup, signin } = require("../controllers/auth");
 const { check, validationResult } = require("express-validator");
-router.get("/hi", (req, res) => {
-    res.json({
-        msg: "hello there",
-    });
-});
+
 router.post(
     "/signup",
     [
